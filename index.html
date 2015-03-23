@@ -48,6 +48,14 @@
                 <section>
                     <h1>GeoJSON</h1>
                     <p>Howard Butler, Martin Daly, Allan Doyle, Sean Gillies, Stefan Hagen, Tim Schaub, Erik Wilde</p>
+
+                <aside class="notes">
+                Good afternoon. Thank you very much for attending this presentation.
+                I'm going to make the case for forming a working group to 
+                standardize the GeoJSON format. There's much benefit for not a
+                lot of additional work.
+                </aside>
+
                 </section>
 
                 <section>
@@ -55,36 +63,18 @@
                     <ul>
                     <li>Structured information about geospatially-bounded things (aka "features") and their properties</li>
                     <li>Using JavaScript Object Notation</li>
+                    <li>Simplifies as much as possible</li>
                     </ul>
-                </section>
-
-                <section>
-                    <img src="img/geojsonio.jpg">
-                </section>
-
-                <section>
-                    <img src="img/github.jpg">
-                </section>
-
-                <section>
-                    <h2>Where we are now</h2>
-                    <ul>
-                    <li>GeoJSON is improving data interchange</li>
-                    <li>Maps abound, processes are evolving</li>
-                    <li>Intense demand for improvement</li>
 
                     <aside class="notes">
-                    For example, GitHub. It's a very popular site for 
-                    sharing and curating GeoJSON. But because GeoJSON isn't
-                    a real standard, GitHub's support is variable in quality.
-                    GitHub takes IETF standards like HTTP, JSON, link headers
-                    seriously, but GeoJSON less so.
-
-                    People want GeoJSON to play a role in their infrastructures.
-                    They want to build on it. They want to extend it. They
-                    aren't sure how to do this.
+                    "as much as possible, but no further."
+                    
+                    The simplification I'm talking about isn't
+                    a XML vs JSON issue, it's an issue of geographic information
+                    system architecture. There's been a trend toward complexity
+                    in GIS. GeoJSON is deliberately more simple, not just a JSON
+                    translation of other complex formats.
                     </aside>
-
                 </section>
 
                 <section>
@@ -97,6 +87,62 @@
                     <li>Informal WG moved to GitHub 2011-09-22</li>
                     <li>draft-butler-geojson-00 submitted 2014-01-08</li>
                     </ul>
+
+                    <aside class="notes">
+                    The format is coming up on its 7th birthday. Building 
+                    consenus and writing it up took over a year. The informal
+                    working group copied the IETF in some ways: we committed
+                    ourselves to working openly and tried to put empirical
+                    results before theory. We did not always suceed at the
+                    latter (empiricism).
+                    </aside>
+
+                </section>
+
+                <section>
+                    <img src="img/geojsonio.jpg">
+
+                    <aside class="notes">
+                    GeoJSON is making it easier to design and develop 
+                    applications for capturing data.
+                    </aside>
+                </section>
+
+                <section>
+                    <img src="img/github.jpg">
+
+                    <aside class="notes">
+                    GeoJSON is making it easier to design and develop 
+                    applications for managing and sharing data.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Where we are now</h2>
+                    <ul>
+                    <li>GeoJSON is improving data interchange</li>
+                    <li>Maps abound, processes are evolving</li>
+                    <li>Intense demand for improvement</li>
+
+                    <aside class="notes">
+                    GeoJSON is very widely used. It has good to first class
+                    support in geospatial software. In proprietary products
+                    as well as in open source.
+
+                    There's demand for improvement from GeoJSON.
+
+                    For example, GitHub. It's a very popular site for 
+                    sharing and curating GeoJSON. But because GeoJSON isn't
+                    a real standard, GitHub's support is variable in quality.
+                    GitHub takes IETF standards like HTTP, JSON, link headers
+                    seriously, but GeoJSON less so.
+
+                    People want GeoJSON to play a role in their infrastructures.
+                    They want to build on it. They want to extend it. They
+                    aren't sure how to do this. An RFC will make a huge difference
+                    and a working group.
+                    </aside>
+
                 </section>
 
                 <section>
@@ -107,20 +153,32 @@
                     <li>GeoRSS</li>
                     <li>Atom</li>
                     </ul>
+
+                    <aside class="notes">
+                    GeoJSON is informed by Open Geospatial Standards and
+                    strongly infuenced by the Atom syndication format.
+                    </aside>
+
                 </section>
 
                 <section>
                     <h2>Related Work</h2>
                     <ul>
                     <li>GML, GPX, KML</li>
-                    <li>geo URI scheme</li>
+                    <li>IETF geopriv WG (RFC 5870 - geo URI scheme)</li>
                     <li>Schema.org</li>
-                    <li>TopoJSON</li>
+                    <li>JSON-LD</li>
                     </ul>
-                </section>
 
-                <section>
-                    <img src="img/topojson.jpg">
+                    <aside class="notes">
+                    GeoJSON independently discovered some of the same keywords
+                    later discovered by the W3C's RDF working group. We are
+                    mindful of JSON-LD and have avoided duplication since it
+                    was published.
+
+                    We are in contact with schema.org principals and are
+                    working toward interoperability.
+                    </aside>
                 </section>
 
                 <section>
@@ -137,7 +195,9 @@
                     "The Spatial Data on the Web Working Group must be mindful of the needs of front end Web developers, however, it will not develop any geospatial or map rendering technologies. In other words, this WG is focused specifically on the intersection of the issues facing OGC and W3C members."
 
                     The SDWWG is not developing any tech, which is as it should be.
-                    GeoJSON standardization helps their cause.
+
+                    GeoJSON standardization helps their cause. I fully expect
+                    member of that WG to participate in a GeoJSON WG.
                     </aside>
 
                 </section>
@@ -159,7 +219,7 @@
                     <ul>
                     <li>Agreement with the IETF mission and its principles</li>
                     <li>Desire to have GeoJSON join other JSON RFCs</li>
-                    <li>Standardization required by the last 20%</li>
+                    <li>History of interaction between informal GeoJSON WG and geopriv WG</li>
                     </ul>
 
                     <aside class="notes">
@@ -173,20 +233,11 @@
                 </section>
 
                 <section>
-                    <h2>Why RAI?</h2>
-                    <ul>
-                    <li>RAI has the most geography and location expertise</li>
-                    <li>History of interaction between informal GeoJSON WG and geopriv WG</li>
-                    <li>Indication of interest by members</li>
-                    </ul>
-                </section>
-
-                <section>
                     <h2>Proposed WG Scope</h2>
                     <ul>
+                    <li>Narrow as possible</li>
                     <li>Start with draft-butler-geojson-05</li>
                     <li>More precisely specify the GeoJSON format</li>
-                    <li>Add needed clarifications</li>
                     <li>Document best practices discovered since 2008</li>
                     <li>Investigate implications of recent JSON RFC 7159</li>
                     <li>Alignment with work such as <em>JSON Text Sequences</em> and <em>I-JSON</em> (RFC 7464/7493)</li>
@@ -197,6 +248,20 @@
 
                     Our I-D already contains many fixes and clarifications.
                     It substantially improves the original Spec.
+                    </aside>
+
+                </section>
+
+                <section>
+                    <h2>How much work remains?</h2>
+                    <ul>
+                    <li>Extensibility of GeoJSON</li>
+                    <li>Consideration of other geometry primitives</li>
+                    </ul>
+
+                    <aside class="notes">
+                    There are people who will help work on this but not 
+                    outside a more formal WG.
                     </aside>
 
                 </section>
